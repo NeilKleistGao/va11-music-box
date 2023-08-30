@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="va11-music-box-jvm-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="va11-music-box-jvm-1.0-SNAPSHOT.jar" />
+  </artifact>
+</component>
