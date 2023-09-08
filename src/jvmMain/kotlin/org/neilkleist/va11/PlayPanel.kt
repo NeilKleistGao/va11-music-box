@@ -5,7 +5,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun displaPlayingPanel(): MusicBoxStatus {
+fun displayPlayingPanel(): MusicBoxStatus {
   Text("Playing music...")
   return MusicBoxStatus.PLAYING
 }
