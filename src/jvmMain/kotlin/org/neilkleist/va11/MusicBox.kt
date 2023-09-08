@@ -9,36 +9,27 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 
+import org.neilkleist.va11.*;
+
 @Composable
 @Preview
 fun displayMusicBox() {
-  var showStatus = remember { mutableStateOf(MusicBoxStatus.SELECTING) }
+  val showStatus = remember { mutableStateOf(MusicBoxStatus.SELECTING) }
 
   MaterialTheme {
     Column {
       Row {
         when (showStatus.value) {
           MusicBoxStatus.SELECTING -> {
-            Text("Selecting music...")
+            showStatus.value = displaySelectingPanel()
           }
           MusicBoxStatus.PLAYING -> {
-            Text("Playing music...")
+            showStatus.value = displaPlayingPanel()
           }
         }
       }
 
       displayControlPanel()
     }
-  }
-}
-
-/**
- * Show the setting box and the text.
- */
-@Composable
-private fun displayControlPanel() {
-  Row {
-    Text("Random Text")
-    Text("Control Panel")
   }
 }
